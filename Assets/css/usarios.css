@@ -1,0 +1,122 @@
+main {
+    position: relative;
+    padding: 20px;
+}
+
+.tabla-usuarios {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #5CB85C;
+    border-radius: 4px;
+    background: #fff;
+    padding: 20px;
+    left: 209px;
+    width: 81%;
+    height: 87%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
+}
+
+.busqueda {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.busqueda input {
+    flex-grow: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.busqueda button {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.busqueda .iconoBusqueda{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.busqueda .iconoBusqueda img {
+    width: 20px;
+    height: 20px;
+}
+
+.busqueda .filtrar{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.busqueda .filtrar img {
+    width: 20px;
+    height: 20px;
+}
+
+.usuarios-container {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.usuario-card {
+    background: #fff;
+    border: 1px solid #5CB85C;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.usuario-card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.usuario-card h3 {
+    margin: 10px 0 5px;
+}
+
+.usuario-card p {
+    margin: 0;
+    color: #666;
+}
+
+.acciones {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.acciones button {
+    margin-right: 5px;
+    padding: 10px 20px;
+    border: none;
+    background: #5CB85C;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.acciones button:last-child {
+    background: #5CB85C;
+}
