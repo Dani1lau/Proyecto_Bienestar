@@ -1,0 +1,110 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 20px 20px;
+    background-color: #fff;
+    border: 1px solid #5CB85C;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 80%;
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-left: 284px;
+    margin-top: 28px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin: 300px 0px 0px 25px; /* Elimina el margen superior */
+    padding: 0; /* Asegúrate de que no haya relleno */
+}
+
+.btn-generar-informe {
+    background-color: #5CB85C;
+    color: #fff;
+    padding: 5px 10px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-generar-informe:hover {
+    background-color: #52a552;
+}
+
+.informes-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.informe-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(45.333% - 30px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.informe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.informe-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.informe-card p {
+        color: #666;
+        overflow: hidden; /* Oculta el contenido que se desborda */
+        text-overflow: ellipsis; /* Añade "..." al final del contenido que se desborda */
+        display: -webkit-box; /* Utiliza el modelo de caja flex de WebKit */
+        -webkit-line-clamp: 3; /* Número de líneas a mostrar */
+        -webkit-box-orient: vertical; /* Orientación vertical de las cajas */
+        max-height: 70px; /* Altura máxima, ajusta según necesites */
+        line-height: 1.5; /* Ajusta el espaciado entre líneas */
+}
+
+.informe-card a {
+    display: block;
+    margin-top: 10px;
+    color: #5CB85C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.informe-card a:hover {
+    text-decoration: underline;
+}
+
+.btn-eliminar {
+    background-color: #5CB85C;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-eliminar:hover {
+    background-color: #d9534f;
+}
