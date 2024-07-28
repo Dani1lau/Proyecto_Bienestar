@@ -1,26 +1,45 @@
 main {
     position: relative;
     padding: 20px;
+    margin-left: 220px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .tabla-usuarios {
+    flex-grow: 1;
     position: relative;
+    top: 10px;
     z-index: 2;
     border: 1px solid #5CB85C;
     border-radius: 4px;
     background: #fff;
     padding: 20px;
-    left: 209px;
-    width: 81%;
-    height: 87%;
+    overflow-y: auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.40);
 }
 
-.busqueda {
-    margin-bottom: 20px;
+.busqueda-container {
+    position: fixed;
+    top: 20px;
+    width: calc(100% - 272px); /* Ajusta el ancho al tamaño de la tabla */
+    margin-left: -20px; /* Añade margen para alinearlo con la tabla */
+    padding: 10px 5px;
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: #fff;
+    z-index: 1001; /* Asegura que se superpone a todo */
+    border-bottom: 1px solid #5CB85C; /* Añade una división clara */
+    border-top: 1px solid #5CB85C;
+}
+
+.busqueda {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
 }
 
 .busqueda input {
@@ -39,9 +58,10 @@ main {
     border-radius: 4px;
 }
 
-.busqueda .iconoBusqueda{
+.busqueda .iconoBusqueda {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 8px;
     background: none;
     border: 1px solid #ccc;
@@ -54,9 +74,10 @@ main {
     height: 20px;
 }
 
-.busqueda .filtrar{
+.busqueda .filtrar {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 8px;
     background: none;
     border: 1px solid #ccc;
@@ -70,12 +91,11 @@ main {
 }
 
 .usuarios-container {
-    position: relative;
-    top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 70px; /* Aumenta el margen superior para no superponer */
 }
 
 .usuario-card {
@@ -86,6 +106,12 @@ main {
     width: 100px;
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usuario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .usuario-card img {
@@ -95,15 +121,23 @@ main {
 
 .usuario-card h3 {
     margin: 10px 0 5px;
+    font-size: 18px;
 }
 
 .usuario-card p {
     margin: 0;
+    font-size: 15px;
     color: #666;
 }
 
 .acciones {
-    margin-top: 60px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 220px; /* Añade margen para alinearlo con la tabla */
+    padding: 20px;
+    border-radius: 4px;
+    z-index: 1000;
     text-align: center;
 }
 
@@ -113,10 +147,18 @@ main {
     border: none;
     background: #5CB85C;
     color: #fff;
+    font-size: 15px;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.acciones button:last-child {
-    background: #5CB85C;
+.acciones button:hover {
+    background-color: #52a552;
+    transform: translateY(-2px);
+}
+
+.acciones button a {
+    color: #fff;
+    text-decoration: none;
 }
